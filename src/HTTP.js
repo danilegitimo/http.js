@@ -16,6 +16,29 @@ class HTTP {
         public_url.searchParams.append(key, options.params[key]);
       }
     }
+    
+    // Step 3: If contains headers for send
+    if ( options.hasOwnProperty("headers") ) {
+      for (const key in options.headers) {
+        client.setRequestHeader(key, options.headers[key]);
+      }
+    }
+
+    // Step 4: Add event listeners
+    if ( options.hasOwnProperty("events") ) {
+      for (const key in options.events) {
+        client.addEventListener(key, event => {
+          options.events[key](event);
+        })
+      }
+    }
+
+    // Step 5: If contains body
+    if ( options.hasOwnProperty("body") ) {
+      client.send(options.body);
+    } else {
+      client.send(null);
+    }
 
     // Step 2: Define settings in client
     client.open(options.method, public_url.toString(), true);
