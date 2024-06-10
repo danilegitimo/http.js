@@ -67,5 +67,41 @@ class HTTP {
     }
 
   }
+  
+  // The alias for request() method, with "method" key completed
+  // with "GET"
+  GET(options, callback = false) {
+    options.method = "GET"; this.request(options, callback);
+  }
+
+  // The alias for request() method, with "method" key completed
+  // with "POST"
+  POST(options, callback = false) {
+    options.method = "POST"; this.request(options, callback);
+  }
+
+  // The alias for request() method, with "method" key completed
+  // with "PUT"
+  UPDATE(options, callback = false) {
+    options.method = "PUT"; this.request(options, callback);
+  }
+
+  // The alias for request() method, with "method" key completed
+  // with "DELETE"
+  DELETE(options, callback = false) {
+    options.method = "DELETE"; this.request(options, callback);
+  }
+
+  // The alias for request() method, with "method" key completed
+  // with "OPTIONS"
+  OPTIONS(options, callback = false) {
+    options.method = "OPTIONS"; this.request(options, callback);
+  }
+
+  // The alias for request() method, with "method" key completed
+  // with "PUT"
+  PUT(options, callback = false) {
+    options.method = "PUT"; this.request(options, callback);
+  }
 
 }
