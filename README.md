@@ -170,4 +170,4 @@ Another good practice is to use method code shortcuts. In addition to avoiding
 writing the method for each request, it makes the code clearer what is being
 done.
 
-* This document was translated from Portuguese into English. Please let the author know if there is any error in communication. I would love to continue maintaining this project. Thanks.
+<p style="font-style: italic; color: red">This document was translated from Portuguese into English. Please let the author know if there is any error in communication. I would love to continue maintaining this project. Thanks.</p>
